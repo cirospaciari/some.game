@@ -1,0 +1,24 @@
+{
+  "name": "some.game.part1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "node ./assets/build.js && rollup --compact -c rollup.config.js",
+    "watch": "rollup --watch --compact -c rollup.config.js",
+    "start": "npm run clean && npm run build",
+    "dev": "node ./assets/build.js && npm run watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.1.1",
+    "rollup": "^2.38.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0"
+  }
+}
